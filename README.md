@@ -1,2 +1,3 @@
-# ProteinCoreCluster
-ProteinCoreCluster Identify the aromatic residues facing the internal cavity formed by the TM1 to TM4 helixes in a set of ion channel structures extracted from PDB files, returning a list for each PDB file of pairs and clusters of aromatic residues with lower distances, compared with a given threshold.
+This python script is used to identify the aromatic residues facing the internal cavity formed by the TM1 to TM4 helixes in a set of ion channel structures extracted from PDB files, returning a list for each PDB file of pairs and clusters of aromatic residues with lower distances, compared with a given threshold.
+
+For this, the distances between all alpha carbons in opposing helixes (TM1-TM3 and TM2-TM4) are calculated, choosing the nearest residue pairs. The same procedure is followed for gamma/alpha pairs. Those residues with (Cα-Cα)distance > (Cα-CƳ)distance is recorded in a list. After, it calculates distances between all atoms in pairs of aromatic residues in this list and keeps the minimal distances between pairs. Then, the third code groups in clusters all the pairs with a distance below a defined threshold.
